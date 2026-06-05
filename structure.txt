@@ -1,0 +1,84 @@
+Folder PATH listing
+Volume serial number is 76AE-CF70
+E:.
+|   index.html
+|   logo-bg.png
+|   logo.png
+|   script.js
+|   structure.txt
+|   students.jpg
+|   styles.css
+|   
++---advisory_panel
+|   |   advisory_panel.html
+|   |   script.js
+|   |   styles.css
+|   |   
+|   \---members
+|       \---advisory_pic
+|               member1.jpg
+|               member2.jpg
+|               member3.jpg
+|               member4.jpg
+|               
++---executive_panel
+|   |   executive_panel.html
+|   |   script.js
+|   |   styles.css
+|   |   
+|   \---members
+|       \---executive_pic
+|               member1.jpeg
+|               member1.jpg
+|               member11.jpg
+|               member12.jpg
+|               member13.jpg
+|               member14.jpg
+|               member15.jpg
+|               member16.jpg
+|               member17.jpg
+|               member18.jpg
+|               member2.jpg
+|               member20.jpg
+|               member21.jpg
+|               member22.jpg
+|               member23.jpg
+|               member24.jpg
+|               member25.jpg
+|               member26.jpg
+|               member27.jpg
+|               member3.jpg
+|               member4.jpg
+|               member5.jpg
+|               member6.jpg
+|               member69.jpg
+|               member7.jpg
+|               member8.jpg
+|               member9.jpg
+|               member96.jpg
+|               organizing secretary.jpg
+|               
++---files
+|       Brochure.pdf
+|       commitment-paper.pdf
+|       Constitution.pdf
+|       future-plans.pdf
+|       
++---founding_panel
+|   |   founding_panel.html
+|   |   script.js
+|   |   styles.css
+|   |   
+|   \---members
+|       \---founding_pic
+|               member1.jpg
+|               
+\---our_partners
+    |   partners.html
+    |   script.js
+    |   styles.css
+    |   
+    \---members
+        \---partners_pic
+                member1.jpg
+                

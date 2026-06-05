@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Panel JSON Manager</title>
+
+<style>
+body {
+  font-family: Arial;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f7f7f7;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.member {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+input {
+  padding: 6px;
+}
+
+button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.export {
+  margin-top: 20px;
+  background: black;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Panel JSON Creator</h1>
+
+<input type="file" id="fileInput" accept=".json">
+
+<div id="app"></div>
+
+<button class="export" onclick="exportJSON()">Export JSON</button>
+
+<script>
+
+let data = {
+  advisory_panel: [],
+  founding_panel: [],
+  executive_panel: [],
+  partners_panel: []
+};
+
+function render() {
+
+  const app = document.getElementById("app");
+  app.innerHTML = "";
+
+  Object.keys(data).forEach(panel => {
+
+    const box = document.createElement("div");
+    box.className = "panel";
+
+    box.innerHTML = `
+      <h2>${panel}</h2>
+      <div id="${panel}"></div>
+      <button onclick="addMember('${panel}')">+ Add Member</button>
+    `;
+
+    app.appendChild(box);
+
+    const container = box.querySelector(`#${panel}`);
+
+    data[panel].forEach((m, i) => {
+
+      const row = document.createElement("div");
+      row.className = "member";
+
+      row.innerHTML = `
+        <input placeholder="Name"
+          value="${m.name || ''}"
+          onchange="update('${panel}',${i},'name',this.value)">
+
+        <input placeholder="Role"
+          value="${m.role || ''}"
+          onchange="update('${panel}',${i},'role',this.value)">
+
+        <input placeholder="Institution"
+          value="${m.institution || ''}"
+          onchange="update('${panel}',${i},'institution',this.value)">
+
+        <input placeholder="Image Path"
+          value="${m.image || ''}"
+          onchange="update('${panel}',${i},'image',this.value)">
+
+        <div>
+          <button onclick="up('${panel}',${i})">↑</button>
+          <button onclick="down('${panel}',${i})">↓</button>
+          <button onclick="del('${panel}',${i})">X</button>
+        </div>
+      `;
+
+      container.appendChild(row);
+    });
+
+  });
+}
+
+function addMember(panel) {
+  data[panel].push({
+    name: "",
+    role: "",
+    institution: "",
+    image: ""
+  });
+  render();
+}
+
+function update(panel, index, key, value) {
+  data[panel][index][key] = value;
+}
+
+function del(panel, index) {
+  data[panel].splice(index, 1);
+  render();
+}
+
+function up(panel, i) {
+  if (i === 0) return;
+  [data[panel][i-1], data[panel][i]] = [data[panel][i], data[panel][i-1]];
+  render();
+}
+
+function down(panel, i) {
+  if (i === data[panel].length - 1) return;
+  [data[panel][i+1], data[panel][i]] = [data[panel][i], data[panel][i+1]];
+  render();
+}
+
+function exportJSON() {
+  const blob = new Blob(
+    [JSON.stringify(data, null, 2)],
+    { type: "application/json" }
+  );
+
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "members.json";
+  a.click();
+}
+
+document.getElementById("fileInput")
+.addEventListener("change", e => {
+
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = ev => {
+    try {
+      data = JSON.parse(ev.target.result);
+      render();
+    } catch {
+      alert("Invalid JSON");
+    }
+  };
+
+  reader.readAsText(file);
+});
+
+render();
+
+</script>
+
+</body>
+</html>
