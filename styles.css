@@ -65,9 +65,27 @@ a { color: inherit; text-decoration: none; }
 .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 48px; align-items: center; }
 .eyebrow { margin: 0 0 12px; color: var(--green); font-weight: 900; text-transform: uppercase; letter-spacing: .12em; font-size: 13px; }
 h1, h2, h3, p { margin-top: 0; }
-h1 { font-size: clamp(42px, 6vw, 76px); line-height: .98; letter-spacing: -0.06em; margin-bottom: 24px; }
-h2 { font-size: clamp(30px, 4vw, 48px); line-height: 1.05; letter-spacing: -0.04em; }
-h3 { font-size: 21px; line-height: 1.2; }
+
+h1 { 
+  font-size: clamp(42px, 6vw, 76px) !important; 
+  line-height: .98 !important;
+  letter-spacing: -0.06em !important;
+  margin-bottom: 24px !important;
+  font-weight: bold;
+}
+
+h2 { 
+  font-size: clamp(30px, 4vw, 48px) !important; 
+  line-height: 1.05 !important; 
+  letter-spacing: -0.04em !important; 
+  font-weight: bold !important;
+
+  margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+
+h3 { 
+  font-size: 21px !important; line-height: 1.2 !important; }
 .hero-text { font-size: 19px; color: var(--muted); max-width: 660px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
 .hero-card { position: relative; min-height: 420px; }
@@ -163,7 +181,7 @@ h3 { font-size: 21px; line-height: 1.2; }
 }
 
 .partners-card::before {
-  background-image: url("our_partners/members/partners_pic/member1.jpg");
+  background-image: url("our_partners/members/partners_pic/member1.jpeg");
 }
 
 .person-card p {
@@ -186,7 +204,7 @@ h3 { font-size: 21px; line-height: 1.2; }
 
 .avatar { width: 64px; height: 64px; border-radius: 22px; background: var(--mint); color: var(--green); display: grid; place-items: center; font-weight: 900; font-size: 26px; margin-bottom: 18px; }
 .quote-card { background: var(--green); color: white; border-radius: 34px; padding: clamp(32px, 6vw, 64px); font-size: clamp(26px, 4vw, 46px); line-height: 1.1; letter-spacing: -0.04em; font-weight: 800; }
-.cta-section { padding: 64px 0; color: white; }
+.cta-section { padding: 64px 0; color: white; background-color: var(--ink);}
 .cta-box { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .cta-box p:not(.eyebrow) { color: #cfe2dc; }
 .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 52px; }
