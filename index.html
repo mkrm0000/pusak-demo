@@ -9,6 +9,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
+
+
+
+
+      
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Configuration & Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pusak: {
+                            green: '#0F6B3E',
+                            darkGreen: '#0A4A2A',
+                            gold: '#D4AF37',
+                            bg: '#F9FBF8',
+                            text: '#1F2933',
+                            gray: '#64748B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "radial-gradient(circle at 50% 0%, rgba(15, 107, 62, 0.08) 0%, rgba(255, 255, 255, 0) 50%)",
+                    }
+                }
+            }
+        }
+    </script>
+
+
+
+
 </head>
 <body>
   <header class="site-header" id="top">
@@ -28,9 +69,12 @@
   <a href="#panels">Panels</a>
   <a href="#contact">Contact</a>
 
+
+  <!--
   <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
     🌙
   </button>
+  -->
 
   <a class="btn btn-small" href="#join">Join PUSAK</a>
 </div>
@@ -154,6 +198,168 @@
       </div>
     </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="dignitaries">
+    
+
+    <div class="container mx-auto px-4">
+        <div class="section-head">
+                  <p class="eyebrow">Messages from Respected Dignitaries</p>
+                  <h2>Appreciation and encouragement for PUSAK’s community-driven initiatives.</h2>
+        </div>
+
+    <div class="dignitary-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+        <!-- EXISTING 3 (UNCHANGED) -->
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="dignitaries/quote1.jpg" alt="UNO" class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-pusak-green">
+            <p class="speech mb-4 text-pusak-gray">
+                “PUSAK’s contribution to education and social awareness
+                is highly commendable and beneficial for Kamalganj.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Md Asaduzzaman</h3>
+            <span class="text-sm text-pusak-gray">Upazila Nirbahi Officer (UNO)</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="dignitaries/quote2.jpg" alt="UNO" class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-pusak-green">
+            <p class="speech mb-4 text-pusak-gray">
+                “Public university students working together through PUSAK
+                demonstrate a strong commitment to education.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Ms. Sample Akter</h3>
+            <span class="text-sm text-pusak-gray">Thana Education Officer (TEO)</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12" alt="OC" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “PUSAK plays an important role in building social harmony
+                and youth responsibility.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Mr. Demo Hossain</h3>
+            <span class="text-sm text-pusak-gray">Officer-in-Charge (OC)</span>
+        </div>
+
+        <!-- NEW 6 SPEECHES -->
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="Advisor" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “PUSAK reflects discipline, vision, and a genuine desire
+                to uplift the next generation through education.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Dr. Hasan Mahmud</h3>
+            <span class="text-sm text-pusak-gray">Advisor, PUSAK</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Advisor" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “The unity among public university students under PUSAK
+                is a powerful example of positive youth leadership.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Prof. Nusrat Jahan</h3>
+            <span class="text-sm text-pusak-gray">Advisor, PUSAK</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a" alt="Advisor" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “PUSAK’s structured approach towards social responsibility
+                sets a benchmark for student organizations.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Engr. Mahbub Alam</h3>
+            <span class="text-sm text-pusak-gray">Advisor, PUSAK</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://i.ibb.co.com/jPDh7qdW/nfofjf.jpg" alt="President" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “Our vision is to serve Kamalganj with integrity,
+                unity, and commitment through collective effort.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">A M Niaz Rahman</h3>
+            <span class="text-sm text-pusak-gray">President, PUSAK</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Senior Vice President" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “PUSAK is not just an organization, it is a responsibility
+                we proudly carry for our community.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">MD Ibrahim Ali</h3>
+            <span class="text-sm text-pusak-gray">Senior Vice President, PUSAK</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://i.ibb.co.com/R4Y5yz7Y/79990474-5ae1-4150-9a92-3be4a2fd5c57.png" alt="General Secretary" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “Through transparency and teamwork, PUSAK will continue
+                to expand its impact across Kamalganj.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Shahdad Khan Jholok</h3>
+            <span class="text-sm text-pusak-gray">General Secretary, PUSAK</span>
+        </div>
+
+    </div>
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     <section class="section container">
       <div class="quote-card">
@@ -165,7 +371,7 @@
       <div class="container cta-box">
         <div>
           <p class="eyebrow">Membership</p>
-          <h2>Join PUSAK and grow with a purpose-driven student community.</h2>
+          <h2 style="color:black; font-size: large;">Join PUSAK and grow with a purpose-driven student community.</h2>
           <p>Open for public university and medical students from Kamalganj, plus alumni and supporters.</p>
         </div>
         <a class="btn" href="https://forms.gle/" target="_blank" rel="noopener">Start Application</a>
